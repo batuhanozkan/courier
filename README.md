@@ -16,7 +16,8 @@ This application tracks couriers, logs their activities, and calculates the tota
 ## **Prerequisites**
 
 1. **Java 17+** installed on your system.
-2. A tool like **Postman** or **cURL** for testing the APIs.
+2. **Maven** for dependency management and build.
+3. A tool like **Postman** or **cURL** for testing the APIs.
 
 ---
 
@@ -31,9 +32,9 @@ Once the application is running, you can access the H2 database console at:
 
 #### **H2 Console Configuration**
 
-- **JDBC URL**: `jdbc:h2:mem:testdb`  
-- **Username**: `sa`  
-- **Password**: `pass` 
+- **JDBC URL**: `jdbc:h2:mem:testdb`
+- **Username**: `admin`
+- **Password**: `pass`
 
 ---
 
@@ -57,7 +58,7 @@ The following tables are created in the H2 database:
    - `time` (Timestamp)
 
 3. **`store`**  
-   Stores information about store locations. The data is loaded from the stores.json file located in the src/main/resources folder.
+   Stores information about store locations. The data is loaded from the `stores.json` file located in the `src/main/resources` folder.
    - `id` (Primary Key)
    - `name`
    - `lat` (Latitude)
@@ -67,7 +68,28 @@ The following tables are created in the H2 database:
 
 ## **Getting Started**
 
-### ** Run the Application**
+### **1. Clone the Repository**
+
+```bash
+git clone https://github.com/batuhanozkan/courier.git
+cd courier
+```
+
+---
+
+### **2. Build the Application**
+
+Run the following command to clean, compile, and package the project:
+
+```bash
+mvn clean install
+```
+
+This will generate a JAR file in the `target` directory.
+
+---
+
+### **3. Run the Application**
 
 Use the following command to run the application:
 
