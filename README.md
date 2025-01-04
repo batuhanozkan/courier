@@ -10,7 +10,7 @@ This application tracks couriers, logs their activities, and calculates the tota
 - Log courier locations and store entries.
 - Calculate the total travel distance of a courier.
 - Retrieve activity logs for specific couriers.
-
+- Load store information from a JSON file.The data is loaded from the stores.json file located in the src/main/resources folder.
 ---
 
 ## **Prerequisites**
@@ -57,7 +57,7 @@ The following tables are created in the H2 database:
    - `time` (Timestamp)
 
 3. **`store`**  
-   Stores information about store locations.
+   Stores information about store locations. The data is loaded from the stores.json file located in the src/main/resources folder.
    - `id` (Primary Key)
    - `name`
    - `lat` (Latitude)
